@@ -45,11 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
           actions: _resize
               ? [
                   Container(
-                    padding: EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(1.0),
                     child: IconButton(
                       icon: Icon(
                         Icons.remove,
-                        size: 6.0,
+                        size: 15.0,
                       ),
                       onPressed: () {
                         setState(() {
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(60),
+                      borderRadius: BorderRadius.circular(50),
                     ),
                   ),
                   Container(
@@ -105,7 +105,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(
                     child: IconButton(
-                      icon: Icon(Icons.add),
+                      icon: Icon(
+                        Icons.add,
+                        size: 15.0,
+                      ),
                       onPressed: () {
                         setState(() {
                           if (_size < 450) {
