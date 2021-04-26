@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onPressed: () {
                         setState(() {
-                          if (_size < 450) {
+                          if (_size < 500) {
                             _size += 50;
                           }
                         });
@@ -178,7 +178,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Center(
           child: Container(
-            // margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
