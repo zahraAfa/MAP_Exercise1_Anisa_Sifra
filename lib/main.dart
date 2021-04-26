@@ -45,7 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
           actions: _resize
               ? [
                   Container(
-                    padding: EdgeInsets.all(1.0),
+                    margin: EdgeInsets.fromLTRB(10, 12, 0, 12),
+                    width: 30,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 2, color: Colors.white),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
                     child: IconButton(
                       icon: Icon(
                         Icons.remove,
@@ -59,12 +65,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         });
                       },
                     ),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(50),
-                    ),
                   ),
                   Container(
+                    margin: EdgeInsets.fromLTRB(10, 12, 0, 12),
+                    width: 30,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 2, color: Colors.white),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
                     child: TextButton(
                       child: Text(
                         "S",
@@ -78,6 +87,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Container(
+                    margin: EdgeInsets.fromLTRB(10, 12, 0, 12),
+                    width: 30,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 2, color: Colors.white),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
                     child: TextButton(
                       child: Text(
                         "M",
@@ -91,6 +107,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Container(
+                    margin: EdgeInsets.fromLTRB(10, 12, 0, 12),
+                    width: 30,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 2, color: Colors.white),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
                     child: TextButton(
                       child: Text(
                         "L",
@@ -104,6 +127,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Container(
+                    margin: EdgeInsets.fromLTRB(10, 12, 10, 12),
+                    width: 30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 2, color: Colors.white),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
                     child: IconButton(
                       icon: Icon(
                         Icons.add,
