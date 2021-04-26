@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Exercise 1',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
@@ -44,15 +45,76 @@ class _MyHomePageState extends State<MyHomePage> {
           actions: _resize
               ? [
                   Container(
+                    padding: EdgeInsets.all(8.0),
                     child: IconButton(
-                      icon: Icon(Icons.remove),
+                      icon: Icon(
+                        Icons.remove,
+                        size: 6.0,
+                      ),
                       onPressed: () {
                         setState(() {
-                          _size -= 50;
+                          if (_size > 50) {
+                            _size -= 50;
+                          }
                         });
                       },
                     ),
-                  )
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(60),
+                    ),
+                  ),
+                  Container(
+                    child: TextButton(
+                      child: Text(
+                        "S",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _size = 100;
+                        });
+                      },
+                    ),
+                  ),
+                  Container(
+                    child: TextButton(
+                      child: Text(
+                        "M",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _size = 300;
+                        });
+                      },
+                    ),
+                  ),
+                  Container(
+                    child: TextButton(
+                      child: Text(
+                        "L",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _size = 500;
+                        });
+                      },
+                    ),
+                  ),
+                  Container(
+                    child: IconButton(
+                      icon: Icon(Icons.add),
+                      onPressed: () {
+                        setState(() {
+                          if (_size < 450) {
+                            _size += 50;
+                          }
+                        });
+                      },
+                    ),
+                  ),
                 ]
               : [],
         ),
@@ -82,8 +144,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
           child: Container(
             // margin: EdgeInsets.fromLTRB(left, top, right, bottom),
             child: Column(
@@ -98,6 +158,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Container(
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
                   child: Column(
                     // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
