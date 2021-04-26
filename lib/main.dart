@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Center(
           child: Container(
-            // margin: EdgeInsets.fromLTRB(left, top, right, bottom),
+            // margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -191,7 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                  margin: EdgeInsets.fromLTRB(0, 0, 20, 20),
                   child: Column(
                     // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
