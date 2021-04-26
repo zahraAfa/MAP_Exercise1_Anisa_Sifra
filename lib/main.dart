@@ -141,7 +141,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       onPressed: () {
                         setState(() {
-                          if (_size < 500) {
+                          if (_size < 480) {
                             _size += 50;
                           }
                         });
