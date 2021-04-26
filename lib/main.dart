@@ -56,15 +56,41 @@ class _MyHomePageState extends State<MyHomePage> {
                 ]
               : [],
         ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              CheckboxListTile(
+                title: Text('Allow resize?'),
+                value: _resize,
+                onChanged: (bool value) {
+                  setState(() {
+                    _resize = value;
+                  });
+                },
+              ),
+              CheckboxListTile(
+                title: Text('Allow change primer color?'),
+                value: _recolor,
+                onChanged: (bool value) {
+                  setState(() {
+                    _recolor = value;
+                  });
+                },
+              ),
+            ],
+          ),
+        ),
         body: Center(
           // Center is a layout widget. It takes a single child and positions it
           // in the middle of the parent.
           child: Container(
             // margin: EdgeInsets.fromLTRB(left, top, right, bottom),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Container(
+                  margin: EdgeInsets.fromLTRB(0, 150, 0, 0),
                   child: Icon(
                     Icons.alarm,
                     size: _size,
@@ -73,12 +99,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 Container(
                   child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Row(
                         children: [
                           Expanded(
                             child: Slider(
-                              activeColor: Colors.blue[255],
+                              activeColor: Colors.brown,
                               value: _red.toDouble(),
                               min: 0.0,
                               max: 255.0,
@@ -91,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           _recolor
                               ? FloatingActionButton(
-                                  backgroundColor: Colors.red[255],
+                                  backgroundColor: Colors.red,
                                   onPressed: () {
                                     setState(() {
                                       _red = 255;
@@ -108,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Expanded(
                             child: Slider(
-                              activeColor: Colors.blue[255],
+                              activeColor: Colors.brown,
                               value: _green.toDouble(),
                               min: 0.0,
                               max: 255.0,
@@ -121,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           _recolor
                               ? FloatingActionButton(
-                                  backgroundColor: Colors.green[255],
+                                  backgroundColor: Colors.green,
                                   onPressed: () {
                                     setState(() {
                                       _red = 0;
@@ -138,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: [
                           Expanded(
                             child: Slider(
-                              activeColor: Colors.blue[255],
+                              activeColor: Colors.brown,
                               value: _blue.toDouble(),
                               min: 0.0,
                               max: 255.0,
@@ -151,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           _recolor
                               ? FloatingActionButton(
-                                  backgroundColor: Colors.blue[255],
+                                  backgroundColor: Colors.blue,
                                   onPressed: () {
                                     setState(() {
                                       _red = 0;
